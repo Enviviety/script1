@@ -1,4 +1,6 @@
-local h = Instance.new("Hint", workspace)
-h.Text = "hi"
-wait(3)
-h:Destroy()
+local args = {
+    [1] = "a",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
